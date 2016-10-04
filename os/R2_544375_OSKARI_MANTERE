@@ -1,0 +1,6 @@
+EXERCISE_1_1: 4
+EXERCISE_1_2: p1.pick_right_fork(), p2.pick_right_fork(), p3.pick_right_fork(), p1.pick_left_fork(), p2.pick_left_fork(), p3.pick_left_fork()
+EXERCISE_2_1_a: /kernel/locking/semaphore.c
+EXERCISE_2_1_b: 178-188
+EXERCISE_2_2_a: /kernel/locking/mutex.c
+EXERCISE_2_2_b: /arch/x86/include/asm/mutex_64.h
