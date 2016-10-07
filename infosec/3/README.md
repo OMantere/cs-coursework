@@ -2,7 +2,7 @@
 
 In this assignment we had a C program with a buffer overflow vulnerability. The vulnerability is on the line 35, ```sprintf(msg, "%s%s", command_rec, username);```, where the length of ```command_rec``` is left unchecked, allowing us to overwrite ```key```. 
 
-Compiling the given source with GDB and observing the stack we notice ```key``` is at ESP+64 on the stack. ```msg``` is at ESP+48. Putting 32 A's into the message field overwrites all bytes of the 16-bit key with 0x41.
+Compiling the given source with GDB and observing the stack we notice ```key``` is at ESP+64 on the stack. ```msg``` is at ESP+48. Putting 32 A's into the message field overwrites all bytes of the 16-byte key with 0x41.
 
 I then added a line just before the MAC check to print out the MAC encoded with our key. Putting this in the "HMAC"-field and 32 A's in the "Command"-field gives us access. 
 
